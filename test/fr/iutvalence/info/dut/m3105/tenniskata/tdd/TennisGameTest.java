@@ -9,21 +9,21 @@ public class TennisGameTest
 	public void loveAllTest()
 	{
 		TennisGame tg = new TennisGame();
-		Assert.assertEquals(tg.getScore(), "love-all");		
+		Assert.assertEquals(tg.getScore(), Scores.LOVE_ALL);		
 	}
 	
 	@Test
 	public void fifteenLoveTest(){
 		TennisGame tg = new TennisGame();
 		tg.serverScore();
-		Assert.assertEquals(tg.getScore(), "fifteen-love");
+		Assert.assertEquals(tg.getScore(), Scores.FIFTEEN_LOVE);
 	}
 	
 	@Test
 	public void loveFifteenTest(){
 		TennisGame tg = new TennisGame();
 		tg.receiverScore();
-		Assert.assertEquals(tg.getScore(), "love-fifteen");
+		Assert.assertEquals(tg.getScore(), Scores.LOVE_FIFTEEN);
 	}
 	
 	@Test
@@ -31,7 +31,7 @@ public class TennisGameTest
 		TennisGame tg = new TennisGame();
 		tg.receiverScore();
 		tg.serverScore();
-		Assert.assertEquals(tg.getScore(), "fifteen-all");
+		Assert.assertEquals(tg.getScore(), Scores.FIFTEEN_ALL);
 	}
 
 	
