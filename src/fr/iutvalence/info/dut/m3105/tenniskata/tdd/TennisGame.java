@@ -25,7 +25,9 @@ public class TennisGame
 		if(serverScore == 15 && receiverScore == 0)
 			return "fifteen-love";
 		if(serverScore == 0 && receiverScore == 15)
-			return "love-fifteen";		
+			return "love-fifteen";
+		if(serverScore == 15 && receiverScore == 15)
+			return "fifteen-all";	
 		return null;
 	}
 	
