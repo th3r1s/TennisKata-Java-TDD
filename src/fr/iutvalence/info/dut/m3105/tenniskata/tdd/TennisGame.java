@@ -15,11 +15,17 @@ public class TennisGame
 		serverScore += 15;
 	}
 	
+	public void receiverScore(){
+		receiverScore += 15;
+	}
+	
 	public String getScore(){
 		if(serverScore == 0 && receiverScore == 0)
 			return "love-all";
 		if(serverScore == 15 && receiverScore == 0)
 			return "fifteen-love";
+		if(serverScore == 0 && receiverScore == 15)
+			return "love-fifteen";		
 		return null;
 	}
 	
