@@ -3,17 +3,23 @@ package fr.iutvalence.info.dut.m3105.tenniskata.tdd;
 public class TennisGame
 {
 	
-	private int score1;
-	private int score2;
+	private int serverScore;
+	private int receiverScore;
 	
 	public TennisGame() {
-		score1 = 0;
-		score2 = 0;
+		serverScore = 0;
+		receiverScore = 0;
+	}
+	
+	public void serverScore(){
+		serverScore += 15;
 	}
 	
 	public String getScore(){
-		if(score1 == 0 && score2 == 0)
+		if(serverScore == 0 && receiverScore == 0)
 			return "love-all";
+		if(serverScore == 15 && receiverScore == 0)
+			return "fifteen-love";
 		return null;
 	}
 	
