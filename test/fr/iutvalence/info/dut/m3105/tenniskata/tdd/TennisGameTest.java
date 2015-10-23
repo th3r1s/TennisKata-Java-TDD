@@ -1,15 +1,18 @@
 package fr.iutvalence.info.dut.m3105.tenniskata.tdd;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TennisGameTest
 {
 	@Test
-	public void aSimpleBeginningTest()
+	public void loveAllTest()
 	{
-		Assert.fail("...");
+		TennisGame tg = new TennisGame();
+		Assert.assertEquals(tg.getScore(), "love-all");
+		
 	}
 
+	
+	
 }
